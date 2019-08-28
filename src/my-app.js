@@ -21,16 +21,18 @@ store.dispatch({
   type: 'INCREMENT',
 });
 
-function counter(state = 0, action) {
+function recounter(state = 0, action) {
   switch (action.type) {
-    case 'INCREMENT':
+    case 'INCREMENT2':
       return state + 1;
-    case 'DECREMENT':
+    case 'DECREMENT2':
       return state - 1;
     default:
       return state;
   }
 }
+
+store.addReducers({ lazyreducer: recounter });
 
 class MyApp extends connect(store)(LitElement) {
   //  constructor() {}

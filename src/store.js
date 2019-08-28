@@ -33,12 +33,15 @@ function counter(state = 0, action) {
 }
 
 export const store = createStore(
-  combineReducers({ renamed1: todos, renamed2: counter }),
+  //  combineReducers({ renamed1: todos, renamed2: counter }),
   //  todos,
   //  ['this is the initial state'],
-  { renamed1: ['xd from renamed'], renamed2: 100 },
+  //  { renamed1: ['xd from renamed'], renamed2: 100 },
+  (state, action) => state,
   compose(
     lazyReducerEnhancer(combineReducers),
     applyMiddleware(thunk)
   )
 );
+
+store.addReducers({ renamed1: todos, renamed2: counter });
