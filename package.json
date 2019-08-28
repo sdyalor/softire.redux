@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "sdyalor <sdyalor@outlook.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --public us.sdyalor.me"
+  },
   "devDependencies": {
     "eslint": "6.1.0",
     "eslint-config-airbnb": "18.0.1",
@@ -18,5 +21,11 @@
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.1",
+    "pwa-helpers": "^0.9.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
   }
 }
